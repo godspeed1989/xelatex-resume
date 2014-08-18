@@ -1,0 +1,123 @@
+
+\documentclass[12pt,a4paper,roman]{moderncv}
+\usepackage{fontspec,xunicode}
+\usepackage{xkeyval}
+\usepackage[slantfont,boldfont]{xeCJK}
+\usepackage{xcolor}
+
+\setCJKmainfont{SimSun}             % 没有安装Adobe Song 字体的就换回SimSun字体吧
+\setCJKfamilyfont{song}{SimSun}
+\defaultfontfeatures{Mapping=tex-text}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+% moderncv themes
+\moderncvtheme[green]{classic}       % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm} % if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
+
+\usepackage{setspace}
+
+%----------------------------------------------------------------------------------
+% personal data
+%----------------------------------------------------------------------------------
+
+\firstname{闫林}
+\familyname{}
+\title{简历}                   % optional, remove the line if not wanted
+\address{西安}{陕西}            % optional, remove the line if not wanted
+\mobile{15929314206}            % optional, remove the line if not wanted
+%\phone{000-12345678}           % optional, remove the line if not wanted
+%\fax{fax (optional)}           % optional, remove the line if not wanted
+\email{godspeed1989@gmail.com}  % optional, remove the line if not wanted
+\extrainfo{github.com/godspeed1989}  % optional, remove the line if not wanted
+\photo[80pt]{picture}           % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file
+%\quote{TeX\&\LaTeX王国}         % optional, remove the line if not wante
+
+\nopagenumbers{}                % uncomment to suppress automatic page numbering
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\begin{spacing}{1.2}           %行间距
+
+\section{个人简介}
+
+\cvline{出生年月}{1989.08.12}
+\cvline{籍贯}{陕西西安}
+\cvline{学历}{西安电子科技大学硕士研究生}
+\cvline{CET4}{530}
+\cvline{CET6}{473}
+
+\section{教育背景}
+
+\cventry{2012-2015}{硕士}{西安电子科技大学}{计算机应用技术}{}{}
+\cventry{2008-2012}{本科}{西安电子科技大学}{软件工程}{}{}
+
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\section{项目经历}
+
+\cvline{2012.09\\2012.12}{\textbf{华为技术有限公司GenexSpace数据压缩项目一期\ \ \ \ \ 项目开发 35人月}}
+\cvlistitem{本项目通过数据压缩技术，为VPC（虚拟私有云）、网络场景特征库建立及特征识别、WEB GIS等项目提供服务，增强现有平台数据传输能力，支持专业服务交付活动。本海量数据压缩技术项目是GenexSpace技术合作项目中一项关键技术。}
+\cvlistitem{由于无线网络数据（话务日志，测量报告，话统数据）从客户网络上传至数据中心的耗时过长，已成为制约自助看网项目数据处理速度的瓶颈。本项目通过对GSM、UMTS、CDMA等制式数据进行预处理后压缩，提升上传效率。}
+\cvlistitem{负责整体架构设计以及核心模块实现工作；参与专利《基于话务数据的海量数据压缩》及《设计规格说明书》的撰写；达成数据传输效率提升3-4倍的目标，并获得华为技术有限公司西安研究所的应用证明。}
+
+\cvline{2013.03\\2014.01}{\textbf{华为技术有限公司GenexSpace数据压缩项目二期\ \ 项目负责人 42人月}}
+\cvlistitem{在一期的基础上深度分析GSMMR、GSMCHR、UMTSMR、UMTSCHR类型数据，进一步缩短压缩时间、提升压缩效率。利用XML，ASN.1数据格式描述文件，动态适配无线网络数据格式，减少格式升级造成的额外工作量。}
+\cvlistitem{负责项目管理、整体架构设计以及核心模块的设计和实现；撰写专利《一种针对无线网络数据的智能高效压缩方法》、《设计规格说明书》等项目文档。}
+
+\cvline{2013.12\\2014.05}{\textbf{IBM智慧存储——基于SSD的HDD缓存系统\ \ \ \ \ \ 项目负责人 12人月}}
+\cvlistitem{针对SSD的价格相对HDD仍然过高，存储中心大多情况下同时使用HDD和SSD进行混合存储这一现状。本项目提出一种将未作存储使用的SSD作为HDD的缓存，提升整个存储系统的IO性能的解决方案。设计并实现了一种新的同时考虑时间和使用频度的缓存页面替换算法。}
+\cvlistitem{经测试缓存系统可提升HDD读性能4-7倍，写性能3-4倍。}
+\cvlistitem{完成Windows下的WDM驱动程序开发，实现LRU、LFU、SLRU等缓存页替换算法。}
+
+\cvline{2012.11\\2013.12}{\textbf{实现Adaboost机器学习算法和Viola\&Jones人脸检测算法\ \ \ \ \ \ 6个月}}
+\cvlistitem{不依赖第三方库，使用C语言实现Adaboost机器学习训练算法。}
+\cvlistitem{利用Adaboost算法训练层叠分类器，实现Viola和Jones两人提出的人脸检测算法。}
+
+\cvline{2010.09\\2011.06}{\textbf{国创计划《WinCE多模态信息获取与主题检索》\ \ \ \ 项目负责人 12人月}}
+\cvlistitem{该项目使用嵌入式移动设备（手机、嵌入式开发板）获得实时图像（书籍封面）通过无线网络发送至服务端。服务端提取图片特征信息进行搜索，反馈用户搜索结果及相关信息。如果搜索不成功，服务端会将该图片加入到图片库中，并允许用户为其添加注释信息与他人共享。}
+\cvlistitem{管理项目进度，设计、实现图片特征提取算法。}
+
+\section{表彰和奖励}
+
+\cvline{2012-2013}{校级一等奖学金}
+\cvline{2013-2014}{校SCST杯创新科技大赛三等奖}
+\cvline{2008-2009}{优秀学生，校级三等奖学金，校数模竞赛一等奖}
+\cvline{2009-2010}{优秀学生，校级二等奖学金，华为杯第八届ACM竞赛二等奖}						
+\cvline{2011-2012}{校级二等奖学金}
+
+\section{专业技能}
+
+\cvlistitem{熟悉C，能使用C++进行面向对象开发}
+\cvlistitem{3年以上Linux操作系统使用经验和Linux驱动程序开发经验}
+\cvlistitem{熟悉脚本语言Lua}
+\cvlistitem{熟悉操作系统原理，IA32体系结构，完整阅读过Linux 0.11内核源码}
+\cvlistitem{熟悉图像处理相关算法；熟悉使用OpenCV进行图像处理}
+\cvlistitem{熟悉使用Qt库进行跨平台图形界面开发}
+\cvlistitem{熟悉使用Git、SVN进行源码托管，有SVN服务器搭建经验}
+\cvlistitem{6个月Windows WDM驱动程序开发经验}
+\cvlistitem{了解Verilog语言，熟悉ISE和Quartus等EDK开发环境}
+\cvlistitem{熟悉使用\LaTeX撰写文档}
+\cvlistitem{国家计算机技术与软件专业资格（水平）证书，软件设计师，中级}
+
+\section{课外活动}
+
+\cvlistitem{本科期间担任西电开源社区技术部顾问，热爱开源软件，对Linux操作系统有较为深刻的认识。}
+
+\section{自我评价}
+
+\cvlistitem{逻辑思维缜密，专业知识基础牢固。}
+\cvlistitem{善于学习和接受新知识，动手能力强，能将新知识很快运用于实践中。}
+\cvlistitem{随和，坦诚待人，具有良好的沟通能力和团队意识。}
+\cvlistitem{有耐心，抗压能力强。}
+
+\end{spacing}
+\end{document}
