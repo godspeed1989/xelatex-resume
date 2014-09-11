@@ -1,0 +1,122 @@
+
+\documentclass[12pt,a4paper,roman]{moderncv}
+\usepackage{fontspec,xunicode}
+\usepackage{xkeyval}
+\usepackage[slantfont,boldfont]{xeCJK}
+\usepackage{xcolor}
+
+\setCJKmainfont{SimSun}             % 没有安装Adobe Song 字体的就换回SimSun字体吧
+\setCJKfamilyfont{song}{SimSun}
+\defaultfontfeatures{Mapping=tex-text}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+% moderncv themes
+\moderncvtheme[green]{classic}       % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm} % if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
+
+\usepackage{setspace}
+
+%----------------------------------------------------------------------------------
+% personal data
+%----------------------------------------------------------------------------------
+
+\firstname{YanLin}
+\familyname{}
+\title{Resume}                  % optional, remove the line if not wanted
+\address{Xi'an}{Shaan Xi}       % optional, remove the line if not wanted
+\mobile{15929314206}            % optional, remove the line if not wanted
+%\phone{000-12345678}           % optional, remove the line if not wanted
+%\fax{fax (optional)}           % optional, remove the line if not wanted
+\email{godspeed1989@gmail.com}  % optional, remove the line if not wanted
+\extrainfo{github.com/godspeed1989}  % optional, remove the line if not wanted
+\photo[80pt]{picture}           % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file
+%\quote{TeX\&\LaTeX王国}         % optional, remove the line if not wante
+
+\nopagenumbers{}                % uncomment to suppress automatic page numbering
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\begin{spacing}{1.2}           %行间距
+
+\section{Personal Profile}
+
+\cvline{Date of birth}{1989.08.12}
+\cvline{Home}{Xi'an, ShaanXi}
+\cvline{Degree}{Xidian University, Master Degree}
+\cvline{CET4}{530}
+\cvline{CET6}{473}
+
+\section{Education Background}
+
+\cventry{2012-2015}{Master}{Xidian University}{Computer Application Technology}{}{}
+\cventry{2008-2012}{Bachelor}{Xidian University}{Software Engineering}{}{}
+
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\section{Project Experience}
+
+\cvline{2012.09\\2012.12}{\textbf{Xi'an Huawei Technologies Co. GenexSpace Data Compression Project First Phase, Developer, 35 Man-Month}}
+\cvlistitem{Using data compression algorithm to compress GSM, UMTS and CDMA wireless network log data.}
+\cvlistitem{Architecture design and core module implementation, write patent and docs. Get application prove from Huawei Co.}
+
+\cvline{2013.03\\2014.01}{\textbf{Xi'an Huawei Technologies Co. GenexSpace Data Compression Project Second Phase, Developer, 42 Man-Month}}
+\cvlistitem{Analysis data format of GSMMR, GSMCHR, UMTSMR and UMTSCHR. Shorten compress time while improve compress ratio. Using XML, ASN.1 data format description file to dynamic adaptive data format, which avoids works from format updating.}
+\cvlistitem{Project management, architecture design and core module implementation, write patent and docs.}
+
+\cvline{2013.12\\2014.05}{\textbf{IBM Intelligent Storage: SSD Based Cache System for HDD, Project Manager, 12 Man-Month}}
+\cvlistitem{The price of SSD is still relatively higher than HDD, most of storage centers use SSD and HDD at the same time. This project propose a solution utilizing unused space of SSD as the cache of HDD to improve the system's IO performance. Design a new cache page replacement algorithm.}
+\cvlistitem{The read performance of HDD improved 4-7 times, while the write 3-4 times.}
+\cvlistitem{Windows WDM driver programming, design and implement cache system.}
+
+\cvline{2012.11\\2013.12}{\textbf{Implementation of Adaboost machine learning algorithm and Viola\&Jones Face Detection, 6 Month}}
+\cvlistitem{Implement Adaboost machine learning algorithm in C without depending on 3rd party library.}
+\cvlistitem{Use Adaboost to train cascade classifier to implement Viola\&Jones face detection algorithm.}
+
+\cvline{2010.09\\2011.06}{\textbf{Image Information Accessing and Subject Retrieval, Project Manager, 12 Man-month}}
+\cvlistitem{Project uses embedded device to access image and uploads to server. The server extracts image features which are used to retrieve from database. The retrieved results are feed-backed. If no matched information exists in database, the image will be added to database.}
+\cvlistitem{Project schedule management, design and implement image feature extraction algorithm.}
+
+\section{Awards}
+
+\cvline{2012-2013}{School first-class scholarship}
+\cvline{2013-2014}{Third prize of SCST science and technology innovation cup contest}
+\cvline{2008-2009}{Outstanding students, school third-class scholarship, the first prize in the contest of mathematical modeling}
+\cvline{2009-2010}{Outstanding students, school second-class scholarship, second prize of Huawei ACM contest}
+\cvline{2011-2012}{School second-class scholarship}
+
+\section{Professional Skills}
+
+\cvlistitem{Familiar C and C++ OO design.}
+\cvlistitem{More than three years experience in Linux and Linux driver development.}
+\cvlistitem{Familiar Lua script language.}
+\cvlistitem{Familiar operating system conceptions, IA32 architecture and Linux 0.11 kernel source.}
+\cvlistitem{Familiar image processing and OpenCV processing library.}
+\cvlistitem{Familiar cross platform GUI development using Qt.}
+\cvlistitem{Familiar source management using Git or SVN.}
+\cvlistitem{Six months Windows WDM driver development.}
+\cvlistitem{Understand Verilog, familiar ISE and Quartus EDK development environment.}
+\cvlistitem{Familiar \LaTeX}
+\cvlistitem{National computer technology and software professional qualifications, software engineer, intermediate level}
+
+\section{Extracurricular Activities}
+
+\cvlistitem{Technology consultant for Xidian open source community.}
+
+\section{Self Assessment}
+
+\cvlistitem{Rigorous logic thinking, solid professional knowledge foundation.}
+\cvlistitem{Good at learning and accepting new knowledge, beginning ability is strong, can quickly apply the new knowledge to practice.}
+\cvlistitem{Good communication skills and team consciousness.}
+\cvlistitem{Have patience, compressive ability.}
+
+\end{spacing}
+\end{document}
